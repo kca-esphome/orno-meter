@@ -1,0 +1,112 @@
+## Power meter: ORNO OR-WE-516 
+#
+# Modbus RTU (rs485)
+#
+# vars:
+#
+#   - modbus_controller_id
+#   - power_meter_id
+#   - power_meter_name
+#
+#VARS::
+substitutions:
+  modbus_controller_id: modbus_controller_id
+  power_meter_id: power_meter_id
+  power_meter_name: power_meter_name
+  register_type: holding
+  skip_updates: 100
+  force_new_range: true
+
+sensor:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    id: ${power_meter_id}_SerialNumber
+    name: "${power_meter_name}-SerialNumber"
+    force_new_range: ${force_new_range} 
+    address: 0x0000
+    register_type: ${register_type}
+    value_type: U_DWORD
+    skip_updates: ${skip_updates}
+    device_class: ""
+    state_class: ""
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    id: ${power_meter_id}_MeterID
+    name: "${power_meter_name}-MeterID"
+    address: 0x0002
+    register_type: ${register_type}
+    value_type: U_WORD
+    skip_updates: ${skip_updates}
+    device_class: ""
+    state_class: ""
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    id: ${power_meter_id}_Baudrate
+    name: "${power_meter_name}-Baudrate"
+    address: 0x0003
+    register_type: ${register_type}
+    value_type: U_WORD
+    skip_updates: ${skip_updates}
+    device_class: ""
+    state_class: ""
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    id: ${power_meter_id}_Software
+    name: "${power_meter_name}-Software"
+    address: 0x0004
+    register_type: ${register_type}
+    value_type: FP32
+    skip_updates: ${skip_updates}
+    device_class: ""
+    state_class: ""
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    id: ${power_meter_id}_Hardware
+    name: "${power_meter_name}-Hardware"
+    address: 0x0006
+    register_type: ${register_type}
+    value_type: FP32
+    skip_updates: ${skip_updates}
+    device_class: ""
+    state_class: ""
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    id: ${power_meter_id}_CT_Rate
+    name: "${power_meter_name}-CT_Rate"
+    address: 0x0008
+    register_type: ${register_type}
+    value_type: U_WORD
+    skip_updates: ${skip_updates}
+    device_class: ""
+    state_class: ""
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    id: ${power_meter_id}_S0_Rate
+    name: "${power_meter_name}-S0_Rate"
+    address: 0x0009
+    register_type: ${register_type}
+    value_type: FP32
+    skip_updates: ${skip_updates}
+    device_class: ""
+    state_class: ""
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    id: ${power_meter_id}_A3
+    name: "${power_meter_name}-A3"
+    address: 0x000B
+    register_count: 2
+    register_type: ${register_type}
+    value_type: U_WORD
+    skip_updates: ${skip_updates}
+    device_class: ""
+    state_class: ""
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    id: ${power_meter_id}_CycleTime
+    name: "${power_meter_name}-CycleTime"
+    address: 0x000D
+    register_type: ${register_type}
+    value_type: U_WORD
+    skip_updates: ${skip_updates}
+    device_class: ""
+    state_class: ""

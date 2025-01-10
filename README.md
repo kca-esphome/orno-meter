@@ -26,11 +26,17 @@ This example uses the ESPhome project to receive the measured values from the en
 
 ## 3.1. Setup
 
-The example device configuration file is *example.yaml*.
+The default:
+
+- Modbus ID: 001
+- Baud Rate: 9600baud
+- Data Bits: 8
+- Stop Bits: 1
+- Parity: even
 
 ## 3.2. Configuration
 
-To set up the WLAN connection, the parameters in *secrets.yaml* must be assigned the correct values. 
+
 
 ## 3.3. 
 

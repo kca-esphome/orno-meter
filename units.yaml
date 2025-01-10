@@ -1,0 +1,8 @@
+substitutions:
+  unit_voltage: "V"
+  unit_current: "A"
+  unit_frequency: "Hz"
+  unit_power_apparent: "kVA"
+  unit_power_active: "kW"
+  unit_power_reactive: "kW"
+  unit_energy: "kWh"
