@@ -14,8 +14,8 @@ substitutions:
   power_meter_id: power_meter_id
   power_meter_name: power_meter_name
   register_type: holding
-  skip_updates: 5
-  skip_updates_energy: 100
+  skip_updates: 1
+  skip_updates_energy: 10
   force_new_range: true
 
 <<: !include ../units.yaml 
