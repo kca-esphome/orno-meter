@@ -14,19 +14,19 @@ substitutions:
   power_meter_id_2: power_meter_id
   power_meter_name_2: power_meter_name
   register_type_2: holding
-  skip_updates_2: 600
-  force_new_range_2: true
+  skip_updates_2: "20"
+  force_new_range_2: "true"
 
 sensor:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_SerialNumber
     name: "${power_meter_name_2}-SerialNumber"
-    force_new_range: ${force_new_range_2} 
+    force_new_range: ${force_new_range_2}
+    skip_updates: ${skip_updates_2}
     address: 0x0000
     register_type: ${register_type_2}
     value_type: U_DWORD
-    skip_updates: ${skip_updates_2}
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_MeterID
@@ -34,7 +34,6 @@ sensor:
     address: 0x0002
     register_type: ${register_type_2}
     value_type: U_WORD
-    skip_updates: ${skip_updates_2}
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_Baudrate
@@ -42,7 +41,6 @@ sensor:
     address: 0x0003
     register_type: ${register_type_2}
     value_type: U_WORD
-    skip_updates: ${skip_updates_2}
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_Software
@@ -50,7 +48,6 @@ sensor:
     address: 0x0004
     register_type: ${register_type_2}
     value_type: FP32
-    skip_updates: ${skip_updates_2}
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_Hardware
@@ -58,7 +55,6 @@ sensor:
     address: 0x0006
     register_type: ${register_type_2}
     value_type: FP32
-    skip_updates: ${skip_updates_2}
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_CT_Rate
@@ -66,7 +62,6 @@ sensor:
     address: 0x0008
     register_type: ${register_type_2}
     value_type: U_WORD
-    skip_updates: ${skip_updates_2}
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_S0_Rate
@@ -74,7 +69,6 @@ sensor:
     address: 0x0009
     register_type: ${register_type_2}
     value_type: FP32
-    skip_updates: ${skip_updates_2}
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_A3
@@ -83,7 +77,6 @@ sensor:
     register_count: 2
     register_type: ${register_type_2}
     value_type: U_WORD
-    skip_updates: ${skip_updates_2}
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_CycleTime
@@ -91,4 +84,3 @@ sensor:
     address: 0x000D
     register_type: ${register_type_2}
     value_type: U_WORD
-    skip_updates: ${skip_updates_2}
