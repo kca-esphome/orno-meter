@@ -1,0 +1,166 @@
+## Power meter: ORNO OR-WE-516 
+#
+# Modbus RTU (rs485)
+#
+# vars:
+#
+#   - modbus_controller_id
+#   - power_meter_id
+#   - power_meter_name
+#
+#VARS::
+substitutions:
+  modbus_controller_id_2: modbus_controller_id
+  power_meter_id_2: power_meter_id
+  power_meter_name_2: power_meter_name
+  register_type_2: holding
+  skip_updates_2: 5
+  skip_energy_updates_2: 100
+  force_new_range_2: true
+
+<<: !include ../units.yaml 
+
+sensor:
+# ---------------------------- Phase voltage LN ------------------------
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id_2}
+    id: ${power_meter_id_2}_system_L1N
+    name: "${power_meter_name_2}-L1N"
+    force_new_range: ${force_new_range_2} 
+    address: 0x000E
+    register_type: ${register_type_2}
+    value_type: FP32
+    skip_updates: ${skip_updates_2}
+    accuracy_decimals: 2
+    unit_of_measurement: ${unit_voltage}
+    device_class: "voltage"
+    state_class: "measurement"
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id_2}
+    id: ${power_meter_id_2}_system_L2N
+    name: "${power_meter_name_2}-L2N"
+    address: 0x0010
+    register_type: ${register_type_2}
+    value_type: FP32
+    skip_updates: ${skip_updates_2}
+    accuracy_decimals: 2
+    unit_of_measurement: ${unit_voltage}
+    device_class: "voltage"
+    state_class: "measurement"
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id_2}
+    id: ${power_meter_id_2}_system_L3N
+    name: "${power_meter_name_2}-L3N"
+    address: 0x0012
+    register_type: ${register_type_2}
+    value_type: FP32
+    skip_updates: ${skip_updates_2}
+    accuracy_decimals: 2
+    unit_of_measurement: ${unit_voltage}
+    device_class: "voltage"
+    state_class: "measurement"
+# ---------------------------- Frequency -------------------------------
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id_2}
+    id: ${power_meter_id_2}_system_frequency
+    name: "${power_meter_name_2}-Frequency"
+    address: 0x0014
+    register_type: ${register_type_2}
+    value_type: FP32
+    skip_updates: ${skip_updates_2}
+    accuracy_decimals: 2
+    unit_of_measurement: ${unit_frequency}
+    device_class: "frequency"
+    state_class: "measurement"
+# ---------------------------- Phase current ---------------------------
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id_2}
+    id: ${power_meter_id_2}_system_I1
+    name: "${power_meter_name_2}-I1"
+    address: 0x0016
+    register_type: ${register_type_2}
+    value_type: FP32
+    skip_updates: ${skip_updates_2}
+    accuracy_decimals: 2
+    unit_of_measurement: ${unit_current}
+    device_class: "current"
+    state_class: "measurement"
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id_2}
+    id: ${power_meter_id_2}_system_I2
+    name: "${power_meter_name_2}-I2"
+    address: 0x0018
+    register_type: ${register_type_2}
+    value_type: FP32
+    skip_updates: ${skip_updates_2}
+    accuracy_decimals: 2
+    unit_of_measurement: ${unit_current}
+    device_class: "current"
+    state_class: "measurement"
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id_2}
+    id: ${power_meter_id_2}_system_I3
+    name: "${power_meter_name_2}-I3"
+    address: 0x001A
+    register_type: ${register_type_2}
+    value_type: FP32
+    skip_updates: ${skip_updates_2}
+    accuracy_decimals: 2
+    unit_of_measurement: ${unit_current}
+    device_class: "current"
+    state_class: "measurement"
+# ---------------------------- Active power ----------------------------
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id_2}
+    id: ${power_meter_id_2}_system_Ptotal
+    name: "${power_meter_name_2}-Ptotal"
+    address: 0x001C
+    register_count: 8
+    register_type: ${register_type_2}
+    value_type: FP32
+    skip_updates: ${skip_updates_2}
+    accuracy_decimals: 2
+    unit_of_measurement: ${unit_power_active}
+    device_class: "power"
+    state_class: "measurement"
+# ---------------------------- Reactive power --------------------------
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id_2}
+    id: ${power_meter_id_2}_system_Qtotal
+    name: "${power_meter_name_2}-Qtotal"
+    address: 0x0024
+    register_count: 8
+    register_type: ${register_type_2}
+    value_type: FP32
+    skip_updates: ${skip_updates_2}
+    accuracy_decimals: 2
+    unit_of_measurement: ${unit_power_reactive}
+    device_class: "reactive_power"
+    state_class: "measurement"
+# ---------------------------- Apparent power --------------------------
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id_2}
+    id: ${power_meter_id_2}_system_Stotal
+    name: "${power_meter_name_2}-Stotal"
+    address: 0x002C
+    register_count: 8
+    register_type: ${register_type_2}
+    value_type: FP32
+    skip_updates: ${skip_updates_2}
+    accuracy_decimals: 2
+    unit_of_measurement: ${unit_power_apparent}
+    device_class: "apparent_power"
+    state_class: "measurement"
+# ---------------------------- PowerFactor -----------------------------
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id_2}
+    id: ${power_meter_id_2}_system_PF
+    name: "${power_meter_name_2}-PF"
+    address: 0x0034
+    register_type: ${register_type_2}
+    value_type: FP32
+    skip_updates: ${skip_updates_2}
+    accuracy_decimals: 3
+    unit_of_measurement: ${unit_power_apparent}
+    device_class: "apparent_power"
+    state_class: "measurement"

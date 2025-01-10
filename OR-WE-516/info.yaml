@@ -14,7 +14,7 @@ substitutions:
   power_meter_id: power_meter_id
   power_meter_name: power_meter_name
   register_type: holding
-  skip_updates: 100
+  skip_updates: 600
   force_new_range: true
 
 sensor:
