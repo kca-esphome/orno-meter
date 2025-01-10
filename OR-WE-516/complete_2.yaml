@@ -14,7 +14,7 @@ substitutions:
   power_meter_id_2: power_meter_id
   power_meter_name_2: power_meter_name
   register_type_2: holding
-#  skip_updates_2: 1
+  skip_updates_2: "1"
 #  skip_energy_updates_2: 10
   force_new_range_2: "true"
 
@@ -30,7 +30,7 @@ sensor:
     address: 0x000E
     register_type: ${register_type_2}
     value_type: FP32
-    #skip_updates: ${skip_updates_2}
+    skip_updates: ${skip_updates_2}
     accuracy_decimals: 2
     unit_of_measurement: ${unit_voltage}
     device_class: "voltage"
@@ -42,7 +42,7 @@ sensor:
     address: 0x0010
     register_type: ${register_type_2}
     value_type: FP32
-    #skip_updates: ${skip_updates_2}
+    skip_updates: ${skip_updates_2}
     accuracy_decimals: 2
     unit_of_measurement: ${unit_voltage}
     device_class: "voltage"
@@ -54,7 +54,7 @@ sensor:
     address: 0x0012
     register_type: ${register_type_2}
     value_type: FP32
-    #skip_updates: ${skip_updates_2}
+    skip_updates: ${skip_updates_2}
     accuracy_decimals: 2
     unit_of_measurement: ${unit_voltage}
     device_class: "voltage"
@@ -67,7 +67,7 @@ sensor:
     address: 0x0014
     register_type: ${register_type_2}
     value_type: FP32
-    #skip_updates: ${skip_updates_2}
+    skip_updates: ${skip_updates_2}
     accuracy_decimals: 2
     unit_of_measurement: ${unit_frequency}
     device_class: "frequency"
@@ -80,7 +80,7 @@ sensor:
     address: 0x0016
     register_type: ${register_type_2}
     value_type: FP32
-    #skip_updates: ${skip_updates_2}
+    skip_updates: ${skip_updates_2}
     accuracy_decimals: 2
     unit_of_measurement: ${unit_current}
     device_class: "current"
@@ -92,7 +92,7 @@ sensor:
     address: 0x0018
     register_type: ${register_type_2}
     value_type: FP32
-    #skip_updates: ${skip_updates_2}
+    skip_updates: ${skip_updates_2}
     accuracy_decimals: 2
     unit_of_measurement: ${unit_current}
     device_class: "current"
@@ -104,7 +104,7 @@ sensor:
     address: 0x001A
     register_type: ${register_type_2}
     value_type: FP32
-    #skip_updates: ${skip_updates_2}
+    skip_updates: ${skip_updates_2}
     accuracy_decimals: 2
     unit_of_measurement: ${unit_current}
     device_class: "current"
@@ -118,7 +118,7 @@ sensor:
     register_count: 8
     register_type: ${register_type_2}
     value_type: FP32
-    #skip_updates: ${skip_updates_2}
+    skip_updates: ${skip_updates_2}
     accuracy_decimals: 2
     unit_of_measurement: ${unit_power_active}
     device_class: "power"
@@ -132,7 +132,7 @@ sensor:
     register_count: 8
     register_type: ${register_type_2}
     value_type: FP32
-    #skip_updates: ${skip_updates_2}
+    skip_updates: ${skip_updates_2}
     accuracy_decimals: 2
     unit_of_measurement: ${unit_power_reactive}
     device_class: "reactive_power"
@@ -146,7 +146,7 @@ sensor:
     register_count: 8
     register_type: ${register_type_2}
     value_type: FP32
-    #skip_updates: ${skip_updates_2}
+    skip_updates: ${skip_updates_2}
     accuracy_decimals: 2
     unit_of_measurement: ${unit_power_apparent}
     device_class: "apparent_power"
@@ -159,7 +159,7 @@ sensor:
     address: 0x0034
     register_type: ${register_type_2}
     value_type: FP32
-    #skip_updates: ${skip_updates_2}
+    skip_updates: ${skip_updates_2}
     accuracy_decimals: 3
     unit_of_measurement: ${unit_power_apparent}
     device_class: "apparent_power"
