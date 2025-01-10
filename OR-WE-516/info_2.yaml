@@ -14,7 +14,7 @@ substitutions:
   power_meter_id_2: power_meter_id
   power_meter_name_2: power_meter_name
   register_type_2: holding
-#  skip_updates_2: 600
+  skip_updates_2: 600
   force_new_range_2: "true"
 
 sensor:
@@ -22,7 +22,8 @@ sensor:
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_SerialNumber
     name: "${power_meter_name_2}-SerialNumber"
-    force_new_range: ${force_new_range_2} 
+    force_new_range: ${force_new_range_2}
+    skip_updates: ${skip_updates_2}
     address: 0x0000
     register_type: ${register_type_2}
     value_type: U_DWORD
