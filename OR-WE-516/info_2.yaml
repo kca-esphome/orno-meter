@@ -27,8 +27,6 @@ sensor:
     register_type: ${register_type_2}
     value_type: U_DWORD
     skip_updates: ${skip_updates_2}
-    device_class: ""
-    state_class: ""
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_MeterID
@@ -37,8 +35,6 @@ sensor:
     register_type: ${register_type_2}
     value_type: U_WORD
     skip_updates: ${skip_updates_2}
-    device_class: ""
-    state_class: ""
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_Baudrate
@@ -47,8 +43,6 @@ sensor:
     register_type: ${register_type_2}
     value_type: U_WORD
     skip_updates: ${skip_updates_2}
-    device_class: ""
-    state_class: ""
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_Software
@@ -57,8 +51,6 @@ sensor:
     register_type: ${register_type_2}
     value_type: FP32
     skip_updates: ${skip_updates_2}
-    device_class: ""
-    state_class: ""
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_Hardware
@@ -67,8 +59,6 @@ sensor:
     register_type: ${register_type_2}
     value_type: FP32
     skip_updates: ${skip_updates_2}
-    device_class: ""
-    state_class: ""
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_CT_Rate
@@ -77,8 +67,6 @@ sensor:
     register_type: ${register_type_2}
     value_type: U_WORD
     skip_updates: ${skip_updates_2}
-    device_class: ""
-    state_class: ""
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_S0_Rate
@@ -87,8 +75,6 @@ sensor:
     register_type: ${register_type_2}
     value_type: FP32
     skip_updates: ${skip_updates_2}
-    device_class: ""
-    state_class: ""
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_A3
@@ -98,8 +84,6 @@ sensor:
     register_type: ${register_type_2}
     value_type: U_WORD
     skip_updates: ${skip_updates_2}
-    device_class: ""
-    state_class: ""
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_CycleTime
@@ -108,5 +92,3 @@ sensor:
     register_type: ${register_type_2}
     value_type: U_WORD
     skip_updates: ${skip_updates_2}
-    device_class: ""
-    state_class: ""
