@@ -16,7 +16,7 @@ substitutions:
   register_type_2: holding
 #  skip_updates_2: 1
 #  skip_energy_updates_2: 10
-  force_new_range_2: true
+  force_new_range_2: "true"
 
 <<: !include ../units.yaml 
 
