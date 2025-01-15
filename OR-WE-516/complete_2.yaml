@@ -170,29 +170,8 @@ sensor:
     modbus_controller_id: ${modbus_controller_id_2}
     id: ${power_meter_id_2}_system_Etotal_active
     name: "${power_meter_name_2}-Etotal_active"
+    force_new_range: ${force_new_range_2}
     address: 0x0100
-    register_type: ${register_type_2}
-    value_type: FP32
-    skip_updates: ${skip_energy_updates_2}
-    accuracy_decimals: 3
-    unit_of_measurement: ${unit_energy}
-    device_class: "energy"
-    state_class: "measurement"
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id_2}
-    id: ${power_meter_id_2}_system_Etotal_activeIn
-    name: "${power_meter_name_2}-Etotal_activeIn"
-    address: 0x0108
-    register_type: ${register_type_2}
-    value_type: FP32
-    skip_updates: ${skip_energy_updates_2}
-    accuracy_decimals: 3
-    unit_of_measurement: ${unit_energy}
-    device_class: "energy"
-    state_class: "measurement"
-    id: ${power_meter_id_2}_system_Etotal_activeOut
-    name: "${power_meter_name_2}-Etotal_activeOut"
-    address: 0x0110
     register_type: ${register_type_2}
     value_type: FP32
     skip_updates: ${skip_energy_updates_2}
