@@ -15,7 +15,7 @@ substitutions:
   power_meter_name_2: power_meter_name
   register_type_2: holding
   skip_updates_2: "1"
-  skip_energy_updates_2: 10
+  skip_energy_updates_2: "10"
   force_new_range_2: "true"
 
 <<: !include ../units.yaml 
@@ -171,7 +171,6 @@ sensor:
     id: ${power_meter_id_2}_system_Etotal_active
     name: "${power_meter_name_2}-Etotal_active"
     address: 0x0100
-    register_count: 8
     register_type: ${register_type_2}
     value_type: FP32
     skip_updates: ${skip_energy_updates_2}
@@ -184,7 +183,6 @@ sensor:
     id: ${power_meter_id_2}_system_Etotal_activeIn
     name: "${power_meter_name_2}-Etotal_activeIn"
     address: 0x0108
-    register_count: 8
     register_type: ${register_type_2}
     value_type: FP32
     skip_updates: ${skip_energy_updates_2}
